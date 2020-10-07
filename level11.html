@@ -11,8 +11,25 @@
             robotArm.loadLevel("exercise 11");
             
             // Jou instructies volgen hier
-        
+            var aantal=5;
+            for(var i=1;i<=10;i++){
+            robotArm.moveRight();
+            }
 
+            for(var j=1;j<=13;j++){
+                robotArm.moveLeft();
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                var kleur = robotArm.scan();
+                if(kleur == "white") {                   
+                    robotArm.moveRight();
+                    robotArm.drop();
+                } else {
+                    robotArm.drop();
+                }
+            }
+            }
+            
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
         </script>

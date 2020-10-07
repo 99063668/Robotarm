@@ -11,70 +11,79 @@
             robotArm.loadLevel("exercise 9");
             
             // Jou instructies volgen hier
-        for(var j=1;j<=4;j++){
+            var getal =5;
+            for (aantal=1; aantal<= 4; aantal++) {
 
-                robotArm.drop();
                 robotArm.grab();
-
-            for(var i=1;i<=5;i++){
-                robotArm.moveRight();}
-
+                for (i=1; i<=getal; i++){
+                    robotArm.moveRight();
+                }
                 robotArm.drop();
+                for (i=2; i<=getal; i++){
+                    robotArm.moveLeft();
+                }
+            }
 
-            for(var i=1;i<=4;i++){
-                robotArm.moveLeft();}
+
+        /*for(var aantal=1; aantal<=4; aantal++){
+            robotArm.grab();
+            for(var i=4; i<=aantal;i++){
+                robotArm.moveRight();
+            robotArm.drop();
+            robotArm.moveLeft();
         }
-            for(var i=1;i<=3;i++){
-                robotArm.moveLeft();}
-
-            for(var j=1;j<=4;j++){
-
-                robotArm.drop();
-                robotArm.grab();
-
-            for(var i=1;i<=5;i++){
-                robotArm.moveRight();}
-
-                robotArm.drop();
-
-            for(var i=1;i<=4;i++){
-                robotArm.moveLeft();}
         }
-             for(var i=1;i<=3;i++){
-                robotArm.moveLeft();}
 
-                robotArm.grab();
+        /*for(var aantal=1; aantal>0; aantal--){
 
+            robotArm.drop();
+            robotArm.grab();
             for(var i=1;i<=5;i++){
-                robotArm.moveRight();}
+                robotArm.moveRight();
+            }
 
-                robotArm.drop();
-
+            robotArm.drop();
             for(var i=1;i<=4;i++){
-                robotArm.moveLeft();}
+                robotArm.moveLeft();
+            }
+        }
+        for(var aantal=2; aantal>0; aantal--){
 
-                robotArm.grab();
-
+            robotArm.grab();
             for(var i=1;i<=5;i++){
-                robotArm.moveRight();}
-
-                robotArm.drop();
-
+                robotArm.moveRight();
+            }
+            robotArm.drop();
             for(var i=1;i<=5;i++){
-                robotArm.moveLeft();}
+                robotArm.moveLeft();
+            }
+        }
+            robotArm.moveRight();
+        for(var aantal=3; aantal>0; aantal--){
 
-                robotArm.grab();
-
+            robotArm.grab();
             for(var i=1;i<=5;i++){
-                robotArm.moveRight();}
+                robotArm.moveRight();
+            }
+            robotArm.drop();
+            for(var i=1;i<=5;i++){
+                robotArm.moveLeft();
+            }
+        }
+            robotArm.moveRight();
+        for(var aantal=4; aantal>0; aantal--){
 
-                robotArm.drop();
-                
-        /*for(var aantal=8; aantal>0; aantal--){}
-
-        for(var i=1; i<=aantal;i++){}*/
-
-
+            robotArm.grab();
+            for(var i=1;i<=5;i++){
+                robotArm.moveRight();
+            }
+            robotArm.drop();
+            for(var i=1;i<=5;i++){
+                robotArm.moveLeft();
+            }
+        }*/
+            
+    
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
         </script>
