@@ -8,10 +8,116 @@
             var robotArm = new RobotArm(canvas);
             robotArm.speed=400
             // Het level inladen
-            robotArm.loadLevel("exercise 13");
+            robotArm.randomLevel( 1, 8);
             
             // Jou instructies volgen hier
-             
+            var stappen = 0;
+            var loop=true;
+            while(loop){
+                robotArm.grab();
+                color = robotArm.scan();
+                if (color != null) {
+                    for(var p=1;p<=stappen;p++) {
+                        robotArm.moveRight();   
+                    }                
+                    robotArm.drop();
+                    for(var j=1;j<=stappen;j++)
+                        robotArm.moveLeft();
+                    stappen++;
+                } else {
+                    loop = false;
+                }
+                
+            } 
+
+           /* var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=1;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=1;i++){            
+                        robotArm.moveLeft();
+                    }
+            }
+            var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=2;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=2;i++){            
+                        robotArm.moveLeft();
+                    }
+            }  
+            var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=3;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=3;i++){            
+                        robotArm.moveLeft();
+                    }
+            }
+            var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=4;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=4;i++){            
+                        robotArm.moveLeft();
+                    }
+            }
+            var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=5;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=5;i++){            
+                        robotArm.moveLeft();
+                    }
+            }
+            var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=6;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=6;i++){            
+                        robotArm.moveLeft();
+                    }
+            }
+            var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=7;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=7;i++){            
+                        robotArm.moveLeft();
+                    }
+            }
+            var aantal=8;
+            for (var b=1; b<=1; b++) {
+                robotArm.grab();
+                    for(var j=1;j<=8;j++){            
+                        robotArm.moveRight();
+                    }
+                    robotArm.drop();
+                    for(var i=1;i<=8;i++){            
+                        robotArm.moveLeft();
+                    }
+            }*/
 
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();

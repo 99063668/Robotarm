@@ -11,20 +11,22 @@
             robotArm.loadLevel("exercise 9");
             
             // Jou instructies volgen hier
-            var getal =5;
-            for (aantal=1; aantal<= 4; aantal++) {
-
+            for (i=1; i<=13; i++){
                 robotArm.grab();
-                for (i=1; i<=getal; i++){
+                robotArm.scan();
+                if (robotArm.scan()==null){
                     robotArm.moveRight();
+                    robotArm.grab();
                 }
-                robotArm.drop();
-                for (i=2; i<=getal; i++){
-                    robotArm.moveLeft();
+                else {
+                    for (j=1; j<=5; j++)
+                        robotArm.moveRight();
+                        robotArm.drop();
+                    for (j=1; j<=5; j++)
+                        robotArm.moveLeft();
                 }
             }
-
-
+           
         /*for(var aantal=1; aantal<=4; aantal++){
             robotArm.grab();
             for(var i=4; i<=aantal;i++){
