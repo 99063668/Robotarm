@@ -11,14 +11,14 @@
             robotArm.loadLevel("exercise 8");
             
             // Jou instructies volgen hier
+            robotArm.moveRight();
             for(var j=1;j<=7;j++){
-
-                for(var i=1;i<=9;i++){
+                for(var b=1;b<=8;b++){
                    robotArm.grab();
                    robotArm.moveRight();
-                   robotArm.drop();}
-
-                for(var i=1;i<=9;i++){
+                   }
+                   robotArm.drop();
+                for(var i=1;i<=8;i++){
                     robotArm.moveLeft();}
             }  
                                      

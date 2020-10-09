@@ -11,13 +11,13 @@
             robotArm.randomLevel( 1, 8);
             
             // Jou instructies volgen hier
-            var stappen = 0;
+            var stappen = 1;
             var loop=true;
             while(loop){
                 robotArm.grab();
                 color = robotArm.scan();
                 if (color != null) {
-                    for(var p=1;p<=stappen;p++) {
+                    for(var p=1;p<=stappen;p++){
                         robotArm.moveRight();   
                     }                
                     robotArm.drop();
@@ -27,7 +27,6 @@
                 } else {
                     loop = false;
                 }
-                
             } 
 
            /* var aantal=8;
